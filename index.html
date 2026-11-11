@@ -2,316 +2,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio | Web Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maya | Frontend Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fff9f8;
-    color: #554653;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 9%;
-    background: rgba(255,249,248,.95);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 1px solid #f3e5e9;
-}
-
-.logo {
-    color: #bf829c;
-    font-size: 23px;
-    font-weight: 800;
-}
-
-nav a {
-    text-decoration: none;
-    color: #715e6b;
-    margin-left: 22px;
-    font-size: 14px;
-    transition: .3s;
-}
-
-nav a:hover {
-    color: #c47e9d;
-}
-
-.hero {
-    min-height: 82vh;
-    display: flex;
-    align-items: center;
-    padding: 80px 12%;
-    background:
-      radial-gradient(circle at 85% 20%, #f4e1ef 0, transparent 32%),
-      radial-gradient(circle at 10% 90%, #fbe3e5 0, transparent 35%),
-      #fff9f8;
-}
-
-.hero-content {
-    max-width: 700px;
-    animation: appear 1s ease;
-}
-
-.tag {
-    display: inline-block;
-    background: #f7e5ec;
-    color: #b57491;
-    padding: 9px 18px;
-    border-radius: 30px;
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: clamp(38px, 6vw, 65px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #c487a2;
-}
-
-.hero p {
-    color: #887985;
-    max-width: 540px;
-    line-height: 1.9;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background: #c487a2;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: .3s;
-    box-shadow: 0 8px 20px #d9b3c3;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-    background: #ad6e8a;
-}
-
-section {
-    padding: 85px 10%;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.subtitle {
-    text-align: center;
-    color: #9b8995;
-    margin-bottom: 45px;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 22px;
-    border: 1px solid #f3e4e9;
-    box-shadow: 0 10px 30px rgba(180,130,155,.08);
-    transition: .35s;
-}
-
-.card:hover {
-    transform: translateY(-9px);
-    box-shadow: 0 15px 35px rgba(180,130,155,.16);
-}
-
-.icon {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    margin-bottom: 12px;
-    color: #a66f89;
-}
-
-.card p {
-    color: #92828e;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.about {
-    background: #f8edf1;
-    text-align: center;
-}
-
-.about p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 2;
-    color: #806f7b;
-}
-
-.contact {
-    text-align: center;
-    background: #fff9f8;
-}
-
-.contact p {
-    color: #958391;
-    margin: 15px 0 28px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #f6e9ed;
-    color: #927b89;
-    font-size: 13px;
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-@media(max-width:600px) {
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fffafd;
+      color: #403344;
+    }
+
     header {
-        padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 9%;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 20px #e9dce733;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #d66c9c;
     }
 
     nav a {
-        margin-left: 8px;
-        font-size: 11px;
+      color: #514457;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d66c9c;
     }
 
     .hero {
-        padding: 65px 8%;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 10%;
+      background: linear-gradient(120deg, #fff5fa, #f5f0ff);
+    }
+
+    .hero-content {
+      max-width: 700px;
+      animation: appear 1s ease;
+    }
+
+    .tag {
+      color: #d66c9c;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    h1 span {
+      color: #d66c9c;
+    }
+
+    .hero p {
+      color: #786d7d;
+      line-height: 1.9;
+      max-width: 550px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      border-radius: 30px;
+      background: #d66c9c;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 8px 20px #d66c9c44;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      background: #bd5686;
     }
 
     section {
-        padding: 65px 7%;
+      padding: 85px 10%;
+      text-align: center;
     }
-}
-</style>
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .section-title span {
+      color: #d66c9c;
+    }
+
+    .subtitle {
+      color: #887c8d;
+      margin-bottom: 40px;
+    }
+
+    .about {
+      max-width: 750px;
+      margin: auto;
+      line-height: 2;
+      color: #766b7b;
+    }
+
+    .services {
+      background: #fff5fa;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 22px;
+      box-shadow: 0 8px 30px #e8d5e533;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card .emoji {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #ca6794;
+    }
+
+    .card p {
+      color: #887c8d;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .contact {
+      background: linear-gradient(120deg, #fff5fa, #f5f0ff);
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: white;
+      color: #958798;
+      font-size: 13px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">MyPortfolio ♡</div>
+  <header>
+    <div class="logo">Maya ♡</div>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
+  </header>
 
-<main>
-<div class="hero" id="home">
-    <div class="hero-content">
-        <span class="tag">♡ Available for new projects</span>
-
-        <h1>Hello, I'm a <span>Web Developer.</span></h1>
-
+  <main>
+    <div class="hero" id="home">
+      <div class="hero-content">
+        <div class="tag">WELCOME TO MY PORTFOLIO</div>
+        <h1>Hello, I'm <span>Maya.</span></h1>
         <p>
-            I create beautiful, modern and responsive websites
-            that help businesses grow online.
-            Let's turn your ideas into reality!
+          I'm a Frontend Developer passionate about creating
+          beautiful, modern and responsive websites.
+          I turn ideas into digital experiences.
         </p>
-
         <a href="#contact" class="btn">Let's Work Together ♡</a>
+      </div>
     </div>
-</div>
 
-<section id="services">
-    <h2 class="section-title">My Services</h2>
-    <p class="subtitle">What I can do for your business</p>
+    <section id="about">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <p class="about">
+        I'm Maya, a web developer who loves designing and building
+        websites. I work with HTML, CSS, JavaScript and React.
+        My goal is to create simple, elegant and user-friendly
+        digital experiences.
+      </p>
+    </section>
 
-    <div class="services">
+    <section class="services" id="services">
+      <h2 class="section-title">My <span>Services</span></h2>
+      <p class="subtitle">What I can do for you</p>
 
+      <div class="cards">
         <div class="card">
-            <div class="icon">🌸</div>
-            <h3>Web Design</h3>
-            <p>Beautiful and modern website designs
-            tailored to your brand.</p>
+          <div class="emoji">🎀</div>
+          <h3>Web Design</h3>
+          <p>Beautiful and modern website designs.</p>
         </div>
 
         <div class="card">
-            <div class="icon">💻</div>
-            <h3>Responsive Websites</h3>
-            <p>Websites that look perfect on phones,
-            tablets and computers.</p>
+          <div class="emoji">💻</div>
+          <h3>Frontend Development</h3>
+          <p>Responsive websites using HTML, CSS and JavaScript.</p>
         </div>
 
         <div class="card">
-            <div class="icon">✨</div>
-            <h3>Bug Fixing</h3>
-            <p>Fixing HTML, CSS, JavaScript and
-            React website issues.</p>
+          <div class="emoji">✨</div>
+          <h3>React Development</h3>
+          <p>Interactive web applications with React.</p>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<section class="about" id="about">
-    <h2 class="section-title">About Me ♡</h2>
-    <p>
-        I am a passionate Frontend Developer specializing
-        in HTML, CSS, JavaScript and React.
-        I enjoy creating elegant digital experiences
-        and turning ideas into beautiful websites.
-    </p>
-</section>
-
-<section class="contact" id="contact">
-    <h2 class="section-title">Let's Create Something Beautiful!</h2>
-    <p>Have a project in mind? I would love to hear from you.</p>
-
-    <a href="mailto:your-email@example.com" class="btn">
+    <section class="contact" id="contact">
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+      <p class="subtitle">
+        Have a project in mind? I'd love to hear from you!
+      </p>
+      <a href="mailto:your-email@example.com" class="btn">
         Contact Me ♡
-    </a>
-</section>
-</main>
+      </a>
+    </section>
+  </main>
 
-<footer>
-    Made with ♡ | My Portfolio © 2026
-</footer>
+  <footer>
+    © 2026 Maya | Made with ♡
+  </footer>
 
 </body>
 </html>
+
 
 
