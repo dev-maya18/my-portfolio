@@ -2,172 +2,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Web Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Web Developer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-            line-height: 1.6;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        header h2 {
-            color: #38bdf8;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff9f8;
+    color: #554653;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    background: rgba(255,249,248,.95);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #f3e5e9;
+}
 
-        .hero {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 60px 10%;
-        }
+.logo {
+    color: #bf829c;
+    font-size: 23px;
+    font-weight: 800;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+nav a {
+    text-decoration: none;
+    color: #715e6b;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: .3s;
+}
 
-        .hero h1 span {
-            color: #38bdf8;
-        }
+nav a:hover {
+    color: #c47e9d;
+}
 
-        .hero p {
-            max-width: 550px;
-            color: #cbd5e1;
-            margin-bottom: 25px;
-        }
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 12%;
+    background:
+      radial-gradient(circle at 85% 20%, #f4e1ef 0, transparent 32%),
+      radial-gradient(circle at 10% 90%, #fbe3e5 0, transparent 35%),
+      #fff9f8;
+}
 
-        .btn {
-            display: inline-block;
-            background: #38bdf8;
-            color: #101827;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            width: fit-content;
-        }
+.hero-content {
+    max-width: 700px;
+    animation: appear 1s ease;
+}
 
-        section {
-            padding: 60px 10%;
-        }
+.tag {
+    display: inline-block;
+    background: #f7e5ec;
+    color: #b57491;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
 
-        h2 {
-            margin-bottom: 20px;
-        }
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+.hero h1 span {
+    color: #c487a2;
+}
 
-        .service {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 12px;
-        }
+.hero p {
+    color: #887985;
+    max-width: 540px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
 
-        .service p {
-            color: #cbd5e1;
-            margin-top: 10px;
-        }
+.btn {
+    display: inline-block;
+    background: #c487a2;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .3s;
+    box-shadow: 0 8px 20px #d9b3c3;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #94a3b8;
-        }
+.btn:hover {
+    transform: translateY(-4px);
+    background: #ad6e8a;
+}
 
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 34px;
-            }
+section {
+    padding: 85px 10%;
+}
 
-            nav a {
-                margin-left: 8px;
-                font-size: 13px;
-            }
-        }
-    </style>
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #9b8995;
+    margin-bottom: 45px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    border: 1px solid #f3e4e9;
+    box-shadow: 0 10px 30px rgba(180,130,155,.08);
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 35px rgba(180,130,155,.16);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #a66f89;
+}
+
+.card p {
+    color: #92828e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about {
+    background: #f8edf1;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 2;
+    color: #806f7b;
+}
+
+.contact {
+    text-align: center;
+    background: #fff9f8;
+}
+
+.contact p {
+    color: #958391;
+    margin: 15px 0 28px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f6e9ed;
+    color: #927b89;
+    font-size: 13px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 65px 8%;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h2>MyPortfolio</h2>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">MyPortfolio ♡</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <div class="hero" id="home">
-        <h1>Hello, I'm a <span>Web Developer</span></h1>
+<main>
+<div class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">♡ Available for new projects</span>
+
+        <h1>Hello, I'm a <span>Web Developer.</span></h1>
+
         <p>
-            I create modern, responsive and professional
-            websites using HTML, CSS, JavaScript and React.
+            I create beautiful, modern and responsive websites
+            that help businesses grow online.
+            Let's turn your ideas into reality!
         </p>
-        <a href="#contact" class="btn">Contact Me</a>
+
+        <a href="#contact" class="btn">Let's Work Together ♡</a>
     </div>
+</div>
 
-    <section id="services">
-        <h2>My Services</h2>
+<section id="services">
+    <h2 class="section-title">My Services</h2>
+    <p class="subtitle">What I can do for your business</p>
 
-        <div class="services">
-            <div class="service">
-                <h3>Web Design</h3>
-                <p>Modern and attractive website designs.</p>
-            </div>
+    <div class="services">
 
-            <div class="service">
-                <h3>Responsive Websites</h3>
-                <p>Websites that work on phones and computers.</p>
-            </div>
-
-            <div class="service">
-                <h3>Bug Fixing</h3>
-                <p>Fixing HTML, CSS and JavaScript problems.</p>
-            </div>
+        <div class="card">
+            <div class="icon">🌸</div>
+            <h3>Web Design</h3>
+            <p>Beautiful and modern website designs
+            tailored to your brand.</p>
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Let's Work Together</h2>
-        <p>Have a project? Let's discuss it!</p>
-        <br>
-        <a href="mailto:your-email@example.com" class="btn">
-            Send Me an Email
-        </a>
-    </section>
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Responsive Websites</h3>
+            <p>Websites that look perfect on phones,
+            tablets and computers.</p>
+        </div>
 
-    <footer>
-        <p>© 2026 My Portfolio. All rights reserved.</p>
-    </footer>
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Bug Fixing</h3>
+            <p>Fixing HTML, CSS, JavaScript and
+            React website issues.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About Me ♡</h2>
+    <p>
+        I am a passionate Frontend Developer specializing
+        in HTML, CSS, JavaScript and React.
+        I enjoy creating elegant digital experiences
+        and turning ideas into beautiful websites.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Let's Create Something Beautiful!</h2>
+    <p>Have a project in mind? I would love to hear from you.</p>
+
+    <a href="mailto:your-email@example.com" class="btn">
+        Contact Me ♡
+    </a>
+</section>
+</main>
+
+<footer>
+    Made with ♡ | My Portfolio © 2026
+</footer>
 
 </body>
 </html>
+
+
